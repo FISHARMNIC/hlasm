@@ -17,7 +17,7 @@ strcpy: beginproc
 		jne strcpy_l
 endproc
 
-main: proc_init
+main: initproc
 	useproc strcpy, &str1, &str2
 	evaluate calculation, 5 * 2 + 3
 	ret
