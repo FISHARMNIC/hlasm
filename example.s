@@ -1,15 +1,18 @@
+.include "lib.s"
+
 strcpy: beginproc
 	pop %ebx
 	pop %eax
-	proc_loop:
-		mov [%eax], %eax
+	strcpy_l:
+        mov %cl, [%ebx]
+		mov [%eax], %cl
 		inc %eax
 		inc %ebx
-		cmpb [%eax], 0
-		jne proc_loop
+		cmpb [%ebx], 0
+		jne strcpy_l
 endproc
 
-main:
+main: proc_init
 	useproc strcpy, &str1, &str2
-	evaluate %eax, 1 + 2 * 3 / 4
+	evaluate calculation, 5 * 2 + 3
 	ret
