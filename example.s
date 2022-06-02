@@ -1,4 +1,9 @@
+.section .data
 .include "lib.s"
+
+calculation: .int 0
+
+.section .text
 
 strcpy: beginproc
 	pop %ebx
