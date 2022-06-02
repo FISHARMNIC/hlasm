@@ -4,6 +4,9 @@
 compile using `node compile.js example.s out.s`  
 
 ### Features
+* Initiation
+  * In your entry/main function, *do not* create a procedure
+  * Instead use `main: initproc`
 * Creating procedures
   * To create a function/procedure begin with `label: beginproc` and end with `endproc`
   * Read parameters using `pop`
