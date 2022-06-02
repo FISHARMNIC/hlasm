@@ -1,7 +1,7 @@
 _stack_d1_: .long 0
 _stack_d2_: .long 0
 
-.macro proc_init
+.macro initproc
 mov %eax, %esp
 sub %eax, 100
 mov _stack_d2_, %eax
